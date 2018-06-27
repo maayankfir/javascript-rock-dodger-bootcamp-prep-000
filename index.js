@@ -39,20 +39,23 @@ function createRock(x) {
 
   var top = 0
 
-  rock.style.top = '${top+=2}px'
+  rock.style.top = top
+  
   GAME.appendChild (rock);
 
   function moveRock() {
-    if (checkCollision(rock) === true ) {
-      return endGame();
-    } else if (top < 360) {
-      window.requestAnimationFrame (moveRock)
+    rock.style.top = `${top += 2}px`
+    if (checkCollision (rock) === true ) {
+      return endGame ();
+    }
+     else if (top < GAME_HEIGHT) {
+      window.requestAnimationFrame (moveRock);
     } else {
       rock.remove();
     }
     }
 
-window.requestAnimationFrame (moveRock)
+window.requestAnimationFrame (moveRock);
 
   ROCKS.push(rock)
   return rock;

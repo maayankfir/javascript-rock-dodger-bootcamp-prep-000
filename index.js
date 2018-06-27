@@ -81,7 +81,7 @@ else if (e.which === RIGHT_ARROW) {
 function moveDodgerLeft() {
     window.requestAnimationFrame(moveDodgerLeft);
   const left = positionToInteger(DODGER.style.left);
-  
+
     if (left > 0) {
         DODGER.style.left = '${left - 4}px';
     }

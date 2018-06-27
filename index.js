@@ -34,7 +34,7 @@ function createRock(x) {
 
   rock.className = 'rock'
   rock.style.left = `${x}px`
-  
+
   var top = 0
 
   rock.style.top = '${top+=2}px'
@@ -44,12 +44,12 @@ function createRock(x) {
     if (checkCollision(rock) === true ) {
       return endGame();
     } else if (top < 360) {
-      window.requestAnimationFrame (moveRock) 
+      window.requestAnimationFrame (moveRock)
     } else {
       rock.remove();
     }
     }
-    
+
 window.requestAnimationFrame (moveRock)
 
   ROCKS.push(rock)
@@ -63,7 +63,7 @@ function endGame() {
   }
   clearInterval (gameInterval);
   window.removeEventListener ('keydown' , moveDodger)
-  alert ("YOU LOSE!"); 
+  alert ("YOU LOSE!");
 }
 
 function moveDodger(e) {
@@ -89,7 +89,7 @@ window.requestAnimationFrame(function() {
   const left = positionToInteger(DODGER.style.left);
   if ( left < 360) {
     DODGER.style.left = '${left + 4}px';
-  } 
+  }
 });
 }
 

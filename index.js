@@ -85,7 +85,7 @@ function moveDodgerLeft() {
       window.requestAnimationFrame(moveDodgerLeft);
     }
   }
-}
+
 
 function moveDodgerRight() {
   const left = positionToInteger(DODGER.style.left);
@@ -94,7 +94,7 @@ function moveDodgerRight() {
     window.requestAnimationFrame(moveDodgerRight);
   }
 }
-}
+
 
 
 /**
